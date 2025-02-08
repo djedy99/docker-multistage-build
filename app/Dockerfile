@@ -1,6 +1,6 @@
 FROM ubuntu:18.04 AS base
 WORKDIR /opt
-RUN apt-get update && apt-get -y install python3 python3-pip locales
+RUN apt-get update && apt-get install -y python3 python3-pip locales
 COPY requirements.txt /opt
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
